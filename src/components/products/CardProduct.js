@@ -16,9 +16,9 @@ const CardProduct = () => {
             <div className="without-discount">$2390</div> 
             <div className="with-discount"><b>$1.269</b></div>
         </div>
-        {/* <div className="box-cart">
+        <div className="box-cart">
             <img className="icon-cart" src={Cart} alt="Logo cart"/>
-        </div> */}
+        </div>
     </div>
     );
   }

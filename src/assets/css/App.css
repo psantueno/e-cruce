@@ -9,12 +9,17 @@
 }
 
 /* header */
-.main-header {
+
+.mobile-mainbar {
   height: 72px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background: #FFFFFF;
+}
+
+.desktop-mainbar {
+  display: none;
 }
 
 /* Logo burguer */
@@ -105,7 +110,11 @@ img.logo {
   margin-top: -2px;
 }
 
-.slider p {
+.slider p.top-banner-tablet {
+  display: none;
+}
+
+.container-topbanner-desktop {
   display: none;
 }
 
@@ -169,7 +178,7 @@ form.form-search-home {
   margin-right: 4%;
 }
 
-.top-banner-mobile {
+.top-banner-title {
   display: block;
   font-weight: 800;
   font-family: "NeueMachina-Ultrabold";
@@ -194,6 +203,19 @@ form.form-search-home {
   align-items: flex-start;
 }
 
+.title-season-desktop {
+  display: none;
+}
+
+.top-banner-subtitle {
+  display: none;
+}
+
+.section-products-plus {
+  display: none;
+}
+
+
 /* Products items */
 
 button {
@@ -211,11 +233,19 @@ button {
   display: block;
 }
 
-.box-button {
+.box-button-collection {
   display: block;
   margin-left: auto;
   margin-right: auto;
   margin-top: 30px;
+}
+
+.btn-collection-mobile {
+  display: contents;
+}
+
+.btn-collection-desktop {
+  display: none;
 }
 
 .cardProduct {
@@ -303,6 +333,7 @@ button {
 }
 
 .box-cart {
+  display: none;
   margin-top: 8px;
 }
 
@@ -312,7 +343,7 @@ button {
   height: 48px;
 }
 
-/* NUESTRAS MARCAS */
+/* OWN BRANDS */
 
 .brands {
   margin: 50px 0;
@@ -339,6 +370,10 @@ button {
   margin: 0 auto;
 }
 
+.carousel-brands-desktop {
+  display: none;
+}
+
 /* BENEFITS */
 
 .carousel-item .img-benefit {
@@ -354,6 +389,15 @@ button {
 
 .benefits {
   margin: 50px 0;
+}
+
+.benefits-desktop {
+  display: none;
+  margin: 50px 0;
+}
+
+.container-benefits-desktop {
+  display: none;
 }
 
 /* TOY OF THE DAY */
@@ -413,6 +457,10 @@ button {
   font-family: "NeueMachina-Ultrabold";
 }
 
+.toy-day-flex {
+  display: block;
+}
+
 /* MOST WANTED */
 
 .section-wanted {
@@ -426,6 +474,13 @@ button {
 }
 
 .box-product-wanted {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 50%;
+}
+
+.amount-dino {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -532,10 +587,6 @@ ul.pagination {
   align-items: center;
 }
 
-/* .show-pages-img {
-  margin-left: auto;
-} */
-
 .pages-info {
   width: 52px;
   height: 18px;
@@ -546,6 +597,10 @@ ul.pagination {
 }
 
 .ul li::marker {
+  display: none;
+}
+
+.box-products-quadruple {
   display: none;
 }
 
@@ -840,29 +895,43 @@ ol.breadcrumb {
   font-weight: bold;
 }
 
-/* form filter by */
+.banner-mobile {
+  margin-top: 40px;
+}
 
-.form-filter {
-  position: relative;
+.banner-desktop {
+  display: none;
+}
+
+.img-banner {
+  width: 100%;
+}
+
+.header-flex {
+  display: block;
+}
+
+/* filter by */
+
+.container-filter {
   display: flex;
-  height: 48.8px;
   justify-content: center;
-  align-items: center;
+  margin: 10px 0px;
 }
 
-.form-filter .fa-filter {
-  position: relative;
-  left: 28px;
+.filter-by {
+  width: 90%;
+  height: 40px;
   color: #8C8C8C;
+  font-family: 'Inter', sans-serif;
+  border-radius: 6px;
+  border: 2px solid #F0F0F0;
+  transition: all 0.4s;
 }
 
-.form-input-filter {
-  text-indent: 33px;
-  border-radius: 6px;
-  border: 2px solid #8C8C8C;
-  font-family: 'Inter', sans-serif;
-  font-weight: 400;
-  margin-right: 15px;
+.filter-by:focus {
+  color: #000000;
+  border: 2px solid #000000;
 }
 
 /* btn order by */
@@ -877,8 +946,15 @@ ol.breadcrumb {
   width: 90%;
   height: 40px;
   color: #8C8C8C;
+  font-family: 'Inter', sans-serif;
   border-radius: 6px;
-  border: 2px solid #8C8C8C;
+  border: 2px solid #F0F0F0;
+  transition: all 0.4s;
+}
+
+.order-by-btn:focus {
+  color: #000000;
+  border: 2px solid #000000;
 }
 
 .container-banner-list-products {
@@ -904,20 +980,21 @@ ol.breadcrumb {
   box-shadow: none;
 }
 
+#pagination-allproducts {
+  justify-content: center;
+}
+
+/* Container all-products */
+
+.all-products {
+  display: block;
+}
 
 
 
+/*************** START MEDIA QUERY ***************/
 
-
-
-
-
-
-
-
-
-
-
+/*************** TABLET ***************/
 
 @media screen and (min-width:576px) {
 
@@ -931,13 +1008,12 @@ ol.breadcrumb {
     justify-content: center;
   }
 
-  .slider p {
+  .slider p.top-banner-tablet {
     display: block;
     color: #FFFFFF;
     margin-top: 2px;
     font-weight: 600;
   }
-
 
   .slider .slide-track {
     display: none;
@@ -963,6 +1039,7 @@ ol.breadcrumb {
 
   .individual-box {
     width: 40%;
+    margin-left: 2%;
   }
 
   .pagination-campaign {
@@ -979,10 +1056,523 @@ ol.breadcrumb {
   .images-campaign {
     height: 330px;
   }
+}
+
+/*************** DESKTOP ***************/
+
+@media screen and (min-width: 720px) {
+
+  .mobile-mainbar {
+    display: none;
+  }
+
+  .desktop-mainbar {
+    height: 72px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #FFFFFF;
+  }
+
+  .box-menu-categories {
+    display: flex;
+    align-items: center;
+    font-family: "NeueMachina-Regular";
+    font-weight: 900;
+  }
+
+  .box-buttons-right {
+    display: flex;
+    align-items: inherit;
+  }
+
+  .btn-mainbar {
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 18px;
+    margin-right: 9px;
+    margin-left: 9px;
+    width: auto;
+    height: auto;
+    box-shadow: none;
+  }
+
+  .btn-hotsale {
+    box-shadow: none;
+    border-style: none;
+    background-color: Transparent;
+    width: auto;
+    height: auto;
+  }
+
+  #box-lol {
+    margin-left: 25px;
+  }
+
+  .links-burguer {
+    text-decoration: none;
+    color: #8C8C8C;
+  }
+
+  .btn-right {
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    width: auto;
+    height: auto;
+    box-shadow: none;
+    margin-right: 6px;
+  }
+
+  .fa-user {
+    color: #000000;
+  }
+
+  #logo-user {
+    font-size: 20px;
+  }
+
+  .slider p.top-banner-tablet {
+    display: none;
+  }
+
+  .container-topbanner-desktop {
+    display: flex;
+    align-items: baseline;
+    width: 100%;
+    justify-content: space-between;
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+
+  .slider p.top-banner-desktop {
+    display: block;
+    color: #FFFFFF;
+    margin-top: 2px;
+    font-weight: 600;
+  }
+
+  .fa-times {
+    color: #ffffff;
+  }
+
+  .container-search {
+    display: none;
+  }
+
+  #benefits-mobile {
+    display: none;
+  }
+
+  .benefits-desktop {
+    display: block;
+  }
+
+  .container-benefits-mobile {
+    display: none;
+  }
+
+  .container-benefits-desktop {
+    display: flex;
+    justify-content: center;
+  }
+
+  .rotate-border {
+    border-right: 2px solid #C8C8C8;
+    transform: rotate(30deg);
+    padding: 0px 20px;
+  }
+
+  #send-free {
+    margin-left: 30px;
+  }
+
+  #send-24hs {
+    margin-left: 25px;
+  }
+
+  .container-season {
+    display: flex;
+    margin-right: auto;
+    margin-left: 3%;
+  }
+
+  .section-products-plus {
+    display: flex;
+    flex: 20%;
+    margin-left: 10px;
+  }
+
+  .title-season-desktop {
+    display: inline;
+    flex: 20%;
+    margin-left: 10px;
+  }
+
+  .title-season-mobile {
+    display: none;
+  }
+
+  .top-banner-subtitle {
+    display: inline;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+
+  }
+
+  .box-top-left {
+    flex: 20% 1;
+  }
+
+  .box-top-right {
+    flex: 20% 1;
+  }
+
+  .box-18x {
+    display: none;
+  }
+
+  .container-products-top {
+    flex: 20%;
+    flex-wrap: nowrap;
+  }
+
+  .btn-collection-mobile {
+    display: none;
+  }
+
+  .btn-collection-desktop {
+    display: block;
+  }
+
+  .carousel-brands-desktop {
+    display: block;
+  }
+
+  .our-brands {
+    width: auto;
+  }
+
+  #carouselExampleSlidesOnly {
+    display: none;
+  }
+
+  .carousel-item .img-benefit-desktop {
+    width: 165px;
+    height: 80px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .carousel-control-next,
+  .carousel-control-prev {
+    opacity: 1;
+    align-items: baseline;
+    margin-left: 50px;
+  }
+
+  .carousel-control-next {
+    left: 60px;
+  }
+
+  #big-arrows {
+    width: 48px;
+    height: 48px;
+  }
+
+  #without-shadow {
+    width: 48px;
+  }
+
+  .brands-banner-mobile {
+    margin-left: 50px;
+  }
+
+  .title-day {
+    margin: 0;
+    margin-left: 50px;
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+
+  .image-product-mobile {
+    width: 300px;
+    height: 378px;
+    max-width: none;
+  }
+
+  .container-info {
+    display: flex;
+    flex-direction: column;
+    max-width: none;
+    max-height: none;
+  }
+
+  .section-wanted {
+    flex-wrap: nowrap;
+    margin-top: 60px;
+  }
+
+  .title-container-wanted {
+    line-height: 30px;
+    flex: 40% 1;
+    margin-left: 50px;
+  }
+
+  .price-wanted {
+    display: block;
+  }
+
+  .price-wanted-dues {
+    display: block;
+  }
+
+  .price-wanted-final {
+    display: block;
+  }
+
+  .box-cart {
+    display: block;
+  }
+
+  .box-products-double {
+    display: none;
+  }
+
+  .box-products-quadruple {
+    display: flex;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  .title-subtitle-news {
+    margin-left: 50px;
+  }
+
+  .individual-box {
+    margin-left: 1%;
+  }
+
+  .container-campaign {
+    flex-wrap: nowrap;
+  }
+
+  .product-pagination {
+    width: 40%;
+  }
+
+  .container-wanted-timer {
+    margin-top: 55px;
+    display: flex;
+    align-items: center;
+  }
+
+  .image-container-wanted {
+    margin-left: 50px;
+    padding-right: 5%;
+    max-width: 215px;
+    height: 105px;
+    flex: 40%;
+  }
+
+  .container-footer {
+    margin-top: 60px;
+  }
+
+  .footer-top {
+    display: none;
+  }
+
+  .banner-mobile {
+    display: none;
+  }
+
+  .banner-desktop {
+    display: block;
+    margin: 48px;
+  }
+
+  .header-flex {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .filter-by {
+    font-family: "NeueMachina-Regular";
+    font-weight: 600;
+    border: none;
+    color: #000000;
+  }
+
+  .container-filter {
+    display: block;
+    margin: 10px 0px;
+    width: 99px;
+    height: 36px;
+  }
+
+  .container-order-by {
+    width: 192px;
+    height: 36px;
+  }
+
+  .cardProduct-row {
+    display: block;
+    border: none;
+    margin-top: 2%;
+    margin-left: 3%;
+    margin-right: 3%;
+    max-width: 353px;
+  }
+
+  .all-products {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+
+  .title-product {
+    width: 100%;
+  }
+
+  .toy-day-flex {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .video-toy-day {
+    width: 52vw;
+  }
+
+  .box-day-flex {
+    margin-left: 25px;
+  }
+
+  .product-day {
+    margin-top: 0;
+  }
+
+  .amount-dino {
+    display: none;
+  }
+
+  .box-legal {
+    justify-content: space-around;
+  }
+}
+
+/* WIDTH > 785 PX */
+
+@media screen and (min-width: 785px) {
+
+  .title-season-desktop {
+    display: inline;
+    flex: 45%;
+    margin-left: 10px;
+  }
+
+  .container-products-top {
+    flex: 45%;
+  }
+
+  .section-products-plus {
+    flex: 45% 1;
+  }
+
+  .video-toy-day {
+    width: 53vw;
+  }
+
+  .box-day-flex {
+    margin-left: 50px;
+  }
+
+  .image-container-wanted {
+    max-width: 237px;
+  }
+}
+
+/* WIDTH > 920 PX */
+
+@media screen and (min-width: 920px) {
+
+  .title-season-desktop {
+    margin-left: 30px;
+    flex: 45%;
+  }
+
+  .top-banner-title {
+    font-size: 48px;
+  }
+
+  .cardProduct-row {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .video-toy-day {
+    width: 55vw;
+  }
+
+  .amount-dino {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 50%;
+  }
+
+  .individual-box {
+    margin-left: 10px;
+  }
+
+  .image-container-wanted {
+    max-width: 200px;
+  }
+}
 
 
+/* WIDTH > 1100 PX */
+
+@media screen and (min-width: 1100px) {
+
+  .top-banner-title {
+    font-size: 56px;
+  }
+
+  .individual-box {
+    margin-left: 30px;
+  }
+
+  .image-container-wanted {
+    max-width: 237px;
+  }
+}
 
 
+/* WIDTH > 1500 PX */
+
+@media screen and (min-width: 1500px) {
+
+  .title-season-desktop {
+    margin-left: 70px;
+    flex: 41% 1;
+  }
+
+  .box-products-quadruple {
+    justify-content: center;
+    margin-left: 70px;
+  }
 
 
 }

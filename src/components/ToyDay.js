@@ -8,11 +8,13 @@ const ToyDay = () => {
             <div>
                 <h1 className="title-day">Juguete del día</h1>
             </div>
+            <div className="toy-day-flex">
             <img className="video-toy-day" src={Video} alt="Video juguete del día" ></img>
             <div className="box-day-flex">
                 <div className="product-day">
                     <CardProductRow />
                 </div>
+            </div>
             </div>
         </div>
     );

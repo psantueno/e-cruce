@@ -1,6 +1,6 @@
 import React from "react";
 import Product2 from "../../assets/images/backpack.png";
-// import Cart from "../../assets/images/cart.png";
+import Cart from "../../assets/images/cart.png";
 
 const CardProductCampaign = () => {  // se repite código unicamente para mostrar la mochila.
                                      // Para los demás productos se utilizará, con el fin de establecer el maquetado, una sola imagen del producto funko.
@@ -16,9 +16,9 @@ const CardProductCampaign = () => {  // se repite código unicamente para mostra
             <div className="without-discount">$2390</div> 
             <div className="with-discount"><b>$1.269</b></div>
         </div>
-        {/* <div className="box-cart">
+        <div className="box-cart">
             <img className="icon-cart" src={Cart} alt="Logo cart"/>
-        </div> */}
+        </div>
     </div>
     );
   }

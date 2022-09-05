@@ -1,8 +1,8 @@
 import React from "react";
 import { useRef } from "react";
-import ImageButton from "../assets/images/button-go-top.png";
+import ImageButton from "../../assets/images/button-go-top.png";
 
-const ButtonGoTop = () => {
+const BtnGoTop = () => {
 
     const imgGoTop = useRef();
 
@@ -17,11 +17,11 @@ const ButtonGoTop = () => {
 
         <div className="container-go-top">
             <div className="button-go-top">
-                <img src={ImageButton} onClick={goToTop} ref={imgGoTop} ></img>
+                <img src={ImageButton} onClick={goToTop} ref={imgGoTop} alt="boton subir" ></img>
             </div>
         </div>
 
     )
 }
 
-export default ButtonGoTop;
+export default BtnGoTop;

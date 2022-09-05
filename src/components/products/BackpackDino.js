@@ -1,5 +1,5 @@
 import React from "react";
-import Backpack from "../assets/images/mochila.png"
+import Backpack from "../../assets/images/mochila.png"
 
 const BackpackDino = () => {
     return (
@@ -8,8 +8,7 @@ const BackpackDino = () => {
             <img id="img-wanted" src={Backpack} alt="Mochila de ToyStory Dinosaurio Rex"></img>
             <section className="info-wanted-column">
                 <h4 className="title-product-wanted">Mochila de ToyStory Dinosaurio REX</h4>
-                <h4 className="price-wanted">$1.500</h4>
-                <h4 className="price-wanted-dues">$1.350</h4>
+                <h4 className="price-wanted-final">$2.580</h4>
             </section>    
         </div>
     </div>

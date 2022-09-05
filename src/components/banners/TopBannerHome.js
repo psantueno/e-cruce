@@ -1,14 +1,16 @@
 import React from "react";
 
-const TopBanner = () => {
+const TopBannerHome = () => {
 
     return (
-
         <React.Fragment>
-
-            {/*<!-- TopBanner mobile-->*/}
+            <div className="container-topbanner-home">
             <div className="slider">
-                <p>Mantené pulsado cualquier artículo para agregarlo al carrito   <i class="fas fa-times"></i> </p>
+                <p className="top-banner-tablet">Mantené pulsado cualquier artículo para agregarlo al carrito   <i className="fas fa-times"></i> </p>
+                <div className="container-topbanner-desktop">
+                    <p className="top-banner-desktop">Sólo por hoy: envío gratis en todos los productos!</p>
+                    <i className="fas fa-times"></i>
+                </div>
                 <div className="slide-track">
                     <div className="slide">
                         <div>Mantené pulsado cualquier artículo para agregarlo al carrito - </div>
@@ -21,11 +23,10 @@ const TopBanner = () => {
                     </div>
                 </div>
             </div>
-            {/*<!-- End of TopBanner mobile-->*/}
-
-        </React.Fragment>
+        </div>
+        </React.Fragment >
     )
 
 }
 
-export default TopBanner;
+export default TopBannerHome;

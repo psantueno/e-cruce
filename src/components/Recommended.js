@@ -1,5 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import CardProduct from "./products/CardProduct";
+import CardProductCampaign from "../components/products/CardProductCampaign";
 import ControlNext from "../assets/images/control-next.png";
 import ControlPrev from "../assets/images/control-prev.png";
 import ShowPages from "../assets/images/show-pages.png";
@@ -21,17 +23,31 @@ const Recommended = () => {
                     <CardProduct />
                 </div>
             </div>
+            <div className="box-products-quadruple">
+                <div className="individual-box">
+                    <CardProduct />
+                </div>
+                <div className="individual-box">
+                    <CardProductCampaign />
+                </div>
+                <div className="individual-box">
+                    <CardProduct />
+                </div>
+                <div className="individual-box">
+                    <CardProductCampaign />
+                </div>
+            </div>
             <nav aria-label="Page navigation example">
-                <ul class="pagination">
-                    <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Previous">
+                <ul className="pagination">
+                    <li className="page-item">
+                        <Link className="page-link" to="#" aria-label="Previous">
                             <img src={ControlPrev} className="carousel-control-prev-icon" aria-hidden="true" alt="Anterior"></img>
-                        </a>
+                        </Link>
                     </li>
-                    <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Next">
+                    <li className="page-item">
+                        <Link className="page-link" to="#" aria-label="Next">
                             <img src={ControlNext} className="carousel-control-next-icon" aria-hidden="true" alt="Siguiente"></img>
-                        </a>
+                        </Link>
                     </li>
                     <div className="show-pages-img">
                         <img src={ShowPages} className="pages-info" aria-hidden="true" alt="página 2 de 12"></img>

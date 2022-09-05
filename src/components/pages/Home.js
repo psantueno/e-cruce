@@ -1,55 +1,48 @@
 import React from "react";
-import {useRef} from "react";
 import Header from '../Header';
-import TopBanner from "../TopBanner";
+import TopBannerHome from "../banners/TopBannerHome";
 import SearchMobile from "../SearchMobile";
 import Season from "../Season";
 import ToyDay from "../ToyDay";
 import Brands from "../Brands";
 import MostWanted from "../MostWanted";
-import Benefits from "../Benefits";
+import BannerBenefitsMobile from "../banners/BannerBenefitsMobile";
+import BannerBenefitsDesktop  from "../banners/BannerBenefitsDesktop";
 import News from "../News";
 import Campaign from "../Campaign";
 import MostWantedTimer from "../MostWantedTimer";
 import Recommended from "../Recommended";
-import ButtonGoTop from "../ButtonGoTop";
+import BtnGoTop from "../buttons/BtnGoTop";
 import Footer from "../Footer";
-import Wapp from "../../assets/images/whatsapp.png";
-import Alert18 from "../../assets/images/pestania.png"
+import Whatsapp from "../buttons/Whatsapp";
+import Banner18x from "../banners/Banner18x";
 
 
 const Home = () => {
 
-    const cuotas18 = useRef();
-
-    const close = () => {
-        cuotas18.current.style.display = "none";
-    }
-
     return (
         <React.Fragment>
             <div className="home">
-                <a className="button-whatsapp" href="https://api.whatsapp.com/send?phone=[+54][987654321]" target="_blank">
-                    <img className="button-whatsapp" src={Wapp} alt="Icono de Whatsapp"></img>
-                </a>
-                <div className="box-18x" ref={cuotas18}>
-                    <img src={Alert18} className="button-18x"></img>
-                    <i onClick={close} id="icono-cerrar" class="far fa-times-circle"></i>
-                    <p id="title-18x">Aprovechá hasta 18 cuotas sin interés</p>
-                </div>
+                <Whatsapp />
+                <Banner18x />
                 <Header />
-                <TopBanner />
+                <TopBannerHome />
+                <div className="benefits-desktop">
+                    <BannerBenefitsDesktop />
+                </div>
                 <SearchMobile />
                 <Season />
                 <Brands />
-                <Benefits />
+                <div id="benefits-mobile">
+                    <BannerBenefitsMobile />
+                </div>
                 <ToyDay />
                 <MostWanted />
                 <News />
                 <Campaign />
                 <MostWantedTimer />
                 <Recommended />
-                <ButtonGoTop />
+                <BtnGoTop />
                 <Footer />
 
             </div>
