@@ -990,6 +990,16 @@ ol.breadcrumb {
   display: block;
 }
 
+/* PAGE 404 NOT FOUND */
+
+.conatiner-jack {
+display: flex;;
+}
+
+.imgJack {
+  margin: auto;
+}
+
 
 
 /*************** START MEDIA QUERY ***************/
